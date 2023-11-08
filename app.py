@@ -29,14 +29,14 @@ training_args = TrainingArguments(
     num_train_epochs=3,
     evaluation_strategy="steps",
     eval_steps=500,
-    logging_dir="./logs",
+    logging_dir="./logs"
 )
 
 trainer = Trainer(
     model=model,
     args=training_args,
     train_dataset=tokenized_datasets["train"],
-    eval_dataset=tokenized_datasets["test"],
+    eval_dataset=tokenized_datasets["test"]
 )
 
 #TODO make all this work:
